@@ -1,10 +1,5 @@
-var z;
-
-for (var i=0;i<10;i++)
-{
-  var z = aleatorio(10, 20);
-  document.write(z + ", ");
-}
+var vp = document.getElementById("villaplatzi");
+var papel = vp.getContext("2d");
 
 function aleatorio(min, max)
 {

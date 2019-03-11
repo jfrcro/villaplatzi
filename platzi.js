@@ -39,13 +39,17 @@ function dibujar()
   }
   if (vaca.cargaOK)
   {
-    papel.drawImage(vaca.imagen, 140, 250);
+
+    var x = aleatorio(0, 420);
+    var y = aleatorio(0, 420);
+    papel.drawImage(vaca.imagen, x, y);
+    
   }
 }
 
-// function aleatorio(min, max)
-// {
-//   var resultado;
-//   resultado = Math.floor(Math.random() * (max - min + 1)) + min;
-//   return resultado;
-// }
+function aleatorio(min, max)
+{
+  var resultado;
+  resultado = Math.floor(Math.random() * (max - min + 1)) + min;
+  return resultado;
+}

@@ -37,6 +37,10 @@ function dibujar()
   {
     papel.drawImage(fondo.imagen, 0, 0);
   }
+  if (vaca.cargaOK)
+  {
+    papel.drawImage(vaca.imagen, 140, 250);
+  }
 }
 
 // function aleatorio(min, max)

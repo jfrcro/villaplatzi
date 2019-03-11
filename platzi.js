@@ -1,41 +1,44 @@
 var vp = document.getElementById("villaplatzi");
 var papel = vp.getContext("2d");
 
-var fondo = new Image();
-  fondo.src = "tile.png";
-  fondo.addEventListener("load", dibujarFondo);
-var vaca = new Image();
-  vaca.src = "vaca.png";
-  vaca.addEventListener("load", dibujarVacas);
-var cerdo = new Image();
-  cerdo.src = "cerdo.png";
-  cerdo.addEventListener("load", dibujarCerdos);
-var pollo = new Image();
-  pollo.src = "pollo.png";
-  pollo.addEventListener("load", dibujarPollos);
-
-function dibujarFondo()
-{
-  papel.drawImage(fondo, 0, 0);
-}
-function dibujarVacas()
-{
-  papel.drawImage(vaca, 10, 10);
-}
-function dibujarCerdos()
-{
-  papel.drawImage(cerdo, 10, 300);
-}
-function dibujarPollos()
-{
-  papel.drawImage(pollo, 300, 150);
+var fondo = {
+  url: "fondo.png",
+  cargaOK: false
 }
 
-
-
-function aleatorio(min, max)
-{
-  var resultado;
-  resultado = Math.floor(Math.random() * (max - min + 1)) + min;
-  return resultado;
+var vaca = {
+  url: "vacap.ng",
+  cargaOK: false
 }
+
+fondo.imagen = new Image();
+fondo.imagen.src = fondo.url;
+fondo.imagen.addEventListener("load", cargarFondo);
+
+vaca.imagen = new Image();
+vaca.imagen.src = vaca.url;
+vaca.imagen.addEventListener("load", cargarVacas);
+
+// function cargarFondo()
+// {
+//   fondo.cargaOK = true;
+//   dibujar();
+// }
+//
+// function cargarVacas()
+// {
+//   vaca.cargaOK = true;
+//   dibujar();
+// }
+
+// function dibujar()
+// {
+//   papel.drawImage(fondo, 0, 0);
+// }
+//
+// function aleatorio(min, max)
+// {
+//   var resultado;
+//   resultado = Math.floor(Math.random() * (max - min + 1)) + min;
+//   return resultado;
+// }

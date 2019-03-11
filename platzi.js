@@ -6,6 +6,11 @@ var cerdo = {
   cargaOK: false
 }
 
+var fondo = {
+  url: "tile.png",
+  cargaOK: false
+}
+
 function aleatorio(min, max)
 {
   var resultado;
@@ -18,9 +23,19 @@ cerdo.imagen = new Image();
 cerdo.imagen.src = cerdo.url;
 cerdo.imagen.addEventListener("load", cargarCerdo);
 
+fondo.imagen = new Image();
+fondo.imagen.src = fondo.url;
+fondo.imagen.addEventListener("load", cargarFondo);
+
 function cargarCerdo()
 {
   cerdo.cargaOK = true;
+  dibujar();
+}
+
+function cargarFondo()
+{
+  fondo.cargaOK = true;
   dibujar();
 }
 
@@ -29,6 +44,10 @@ var y;
 
 function dibujar()
 {
+  if (fondo.cargaOK)
+  {
+    papel.drawImage(fondo.imagen, 0, 0);
+  }
   if (cerdo.cargaOK)
   {
     // for(var v=0; v < cantidad; v++)
@@ -60,18 +79,22 @@ function dibujarTeclado(eventoTeclado)
   switch (eventoTeclado.keyCode)
     {
       case teclasDibujar.LEFT:
+        papel.drawImage(fondo.imagen, 0, 0);
         papel.drawImage(cerdo.imagen, x - movimiento, y);
         x = x - movimiento;
           break;
       case teclasDibujar.UP:
+        papel.drawImage(fondo.imagen, 0, 0);
         papel.drawImage(cerdo.imagen, x, y - movimiento);
         y = y - movimiento;
           break;
       case teclasDibujar.RIGHT:
+        papel.drawImage(fondo.imagen, 0, 0);
         papel.drawImage(cerdo.imagen, x + movimiento, y);
         x = x + movimiento;
           break;
       case teclasDibujar.DOWN:
+        papel.drawImage(fondo.imagen, 0, 0);
         papel.drawImage(cerdo.imagen, x, y + movimiento)
       y = y + movimiento;
           break;

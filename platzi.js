@@ -31,6 +31,8 @@ function cargarVacas()
   dibujar();
 }
 
+var cantidad = aleatorio(1, 9);
+
 function dibujar()
 {
   if (fondo.cargaOK)
@@ -39,7 +41,8 @@ function dibujar()
   }
   if (vaca.cargaOK)
   {
-    var cantidad = aleatorio(1, 9);
+
+    console.log(cantidad);
     for(var v=0; v < cantidad; v++)
     {
     var x = aleatorio(0, 420);

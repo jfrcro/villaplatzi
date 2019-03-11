@@ -39,7 +39,8 @@ function dibujar()
   }
   if (vaca.cargaOK)
   {
-    for(var v=0; v < 10; v++)
+    var cantidad = aleatorio(1, 9);
+    for(var v=0; v < cantidad; v++)
     {
     var x = aleatorio(0, 420);
     var y = aleatorio(0, 420);

@@ -2,12 +2,12 @@ var vp = document.getElementById("villaplatzi");
 var papel = vp.getContext("2d");
 
 var fondo = {
-  url: "fondo.png",
+  url: "tile.png",
   cargaOK: false
 }
 
 var vaca = {
-  url: "vacap.ng",
+  url: "vaca.png",
   cargaOK: false
 }
 
@@ -31,14 +31,14 @@ function cargarVacas()
   dibujar();
 }
 
+function dibujar()
+{
+  if (fondo.cargaOK)
+  {
+    papel.drawImage(fondo.imagen, 0, 0);
+  }
+}
 
-
-
-// function dibujar()
-// {
-//   papel.drawImage(fondo, 0, 0);
-// }
-//
 // function aleatorio(min, max)
 // {
 //   var resultado;

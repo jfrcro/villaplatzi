@@ -19,17 +19,20 @@ vaca.imagen = new Image();
 vaca.imagen.src = vaca.url;
 vaca.imagen.addEventListener("load", cargarVacas);
 
-// function cargarFondo()
-// {
-//   fondo.cargaOK = true;
-//   dibujar();
-// }
-//
-// function cargarVacas()
-// {
-//   vaca.cargaOK = true;
-//   dibujar();
-// }
+function cargarFondo()
+{
+  fondo.cargaOK = true;
+  dibujar();
+}
+
+function cargarVacas()
+{
+  vaca.cargaOK = true;
+  dibujar();
+}
+
+
+
 
 // function dibujar()
 // {
